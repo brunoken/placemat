@@ -120,3 +120,42 @@ If you can translate the &lsquo;new&rsquo; parameters into Dutch, please post th
 ```PostScript
 /TastingNotesColumnHeadings [  (Tijd)  (Kleur)  (Geur)  (Smaak)  (Punten)  ] def
 ```
+
+
+## French = français
+
+/VoteRecorderTopTexts [
+	[ (Vin de la soirée ?)  /questiondown ]
+	% [ (Qu'est-ce que c'est ?) ]  % If uncommenting this, insert a 'true' into the VoteRecorderShowTotalRow array.
+] def  % Must be same length as GlassesClusteredOnVoteRecorders, each sub-array containing some number of TopTexts
+/VoteRecorderInstruction {VoteRecorderShowTotalRow VoteRecorderSheetNum GetEU {()} {(Noter les points, pas le classement.)} ifelse} bind def
+/VoteRecorderTotalColTitle [(T) {-0.06 Kern} (otal)] def
+/VoteRecorderTotalRowTitle [(T) {-0.09 Kern} (otal)] def
+/VoteRecorderMonkeyName (Singe) def
+
+/TastingNotesColumnHeadings [  (Tour)  (Vue)  (Odorat) (Goût)  (Points)  ] def
+/TastingNotesPageNumCompoundString [(Page ) {TastingSheetNum 1 add 5 string cvs}] def
+
+/DecantingNotesTopText (Notes de décantation) def
+/DecantingNotesColumnHeadingTimes (Temps de décantation) def
+/DecantingNotesColumnHeadingNotes (État du liège, marquage, etc) def
+
+/AccountsTopText (Les comptes) def
+/AccountsColumnGroupHeadings [
+	[/emdash ( Dons ) /emdash]
+	[/emdash ( Partage des coûts ) /emdash]
+	[/emdash ( Règlement ) /emdash]
+] def
+/AccountsSubColumnHeadings [
+	[  (Déjà payé)   (Vins)  ]
+	[  (Vins)   (Aliments etc)  ]
+	[  (Doit)   (Est dû)     [(P) {-0.02 Kern} (ayé ?)]  ]
+] def  % Must be same length as AccountsColumnGroupHeadings
+
+/CorkDisplayTopText (Les Lièges) def
+
+/DecanterLabelsTopText (Étiquettes de carafe: couper; coller sur des cartes de visite; laisser sécher; percer les trous; les accrocher sur des carafes propres; remplir les carafes; attendre; pour; boire; déguster. Boire également beaucoup d'eau.) def
+
+/EmptyPageString (Moins de pages qu'avant, donc cette page est désormais supprimée.) def
+
+/LicensingAgreementTextPlacemats (Ce travail est concédé sous une licence internationale Creative Commons Attribution-ShareAlike 4.0.) def  % To be consistent with LicensingAgreementLinkPlacemats
